@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<div id="calculator__body" class="navyBlue">
+    <div class="calculator__wrapper">
+        <div class="calculator__head">
+            <h3>calc</h3>
+            <div>
+                <div>
+                    <ul class="num__list">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                    <div class="num__listbox">
+                        <p class="num__listbox--text">THEME</p>
+                        <div class="num__listbox--dot active" onclick="changeTheme('navyBlue')" data-theme="navyBlue"></div>
+                        <div class="num__listbox--dot" onclick="changeTheme('purple')" data-theme="purple"></div>
+                        <div class="num__listbox--dot" onclick="changeTheme('gray')" data-theme="gray"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Screen -->
+        <div class="calculator__screen">
+            <input id="screen" disabled>
+        </div>
+
+        <div class="calculator__btn--wrapper">
+            <div class="calculator__btn--grid">
+                <button onclick="addMoreNums(7)">7</button>
+                <button onclick="addMoreNums(8)">8</button>
+                <button onclick="addMoreNums(9)">9</button>
+                <button onclick="deleteNum()" class="special__btn">DEL</button>
+
+                <button onclick="addMoreNums(4)">4</button>
+                <button onclick="addMoreNums(5)">5</button>
+                <button onclick="addMoreNums(6)">6</button>
+                <button onclick="addMoreNums('+')">+</button>
+
+                <button onclick="addMoreNums(1)">1</button>
+                <button onclick="addMoreNums(2)">2</button>
+                <button onclick="addMoreNums(3)">3</button>
+                <button onclick="addMoreNums('-')">-</button>
+                
+                <button onclick="addMoreNums('.')">.</button>
+                <button onclick="addMoreNums(0)">0</button>
+                <button onclick="addMoreNums('/')">/</button>
+                <button onclick="addMoreNums('*')">x</button>
+            </div>
+
+            <div class="calculator__btn--grid-2">
+                <button class="special__btn" onclick="reset()">RESET</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

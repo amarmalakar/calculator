@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#calculator__body {
+    width: 100%;
+    height: 100vh;
+    padding: 0 12px;
+    padding-top: 60px;
+}
+.calculator__wrapper {
+    max-width: 296px;
+    margin: auto;
+}
+.calculator__head {display: flex;justify-content: space-between;align-items: center;}
+
+.num__list {list-style: none;display: flex;}
+.num__list > li {margin: 0 8px;font-size: 10px;}
+.num__listbox {
+    height: 20px;
+    border-radius: 12px;
+    padding: 2px 4px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.num__listbox--text {
+    font-size: 11px;
+    position: absolute;
+    left: -45px;
+    font-weight: 600;
+}
+.num__listbox--dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ff0;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+.num__listbox--dot.active {opacity: 1;}
+.num__listbox--dot:hover {opacity: .4;}
+
+
+
+.calculator__screen {
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+.calculator__screen > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 30px;
+    padding: 0 16px;
+    text-align: right;
+}
+.calculator__btn--wrapper {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 6px;
+}
+.calculator__btn--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+.calculator__btn--grid > button,
+.calculator__btn--grid-2 > button {
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    border-bottom: 4px solid #ccc;
+    cursor: pointer;
+}
+.calculator__btn--grid > .special__btn,
+.calculator__btn--grid-2 > button {font-size: 14px;}
+
+.calculator__btn--grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    margin-top: 12px;
+}
+
+/* ['navyBlue', 'purple', 'gray'] */
+/* theme color setting */
+.navyBlue {background-color: rgb(59, 70, 100);}
+.navyBlue * {color: #fff;}
+.navyBlue .num__listbox {background-color: rgb(36, 45, 68);}
+.navyBlue .num__listbox--dot {background-color: orangered;}
+.navyBlue .calculator__screen,
+.navyBlue .calculator__btn--wrapper {background-color: rgb(24, 31, 50);}
+.navyBlue .calculator__btn--grid > button {background-color: rgb(233, 227, 221);color: #333;}
+.navyBlue .calculator__btn--grid > .special__btn,
+.navyBlue .calculator__btn--grid-2 > .special__btn {
+    background-color: rgb(100, 113, 155);
+    color: #fff;
+    border-color: rgb(100, 123, 196);
+}
+.navyBlue .calculator__btn--grid-2 > button {
+    background-color: crimson;
+    border-color: rgb(255, 10, 59);
+    color: #fff;
+}
+
+.purple {background-color: rgb(23, 6, 42);}
+.purple * {color: #ff0;}
+.purple .num__listbox {background-color: rgb(30, 8, 54);}
+.purple .num__listbox--dot {background-color: cyan;}
+.purple .calculator__screen,
+.purple .calculator__btn--wrapper {background-color: rgb(30, 8, 54);}
+.purple .calculator__btn--grid > button {
+    background-color: rgb(51, 27, 77);
+    border-bottom: 5px solid #722188;
+}
+.purple .calculator__btn--grid > .special__btn,
+.purple .calculator__btn--grid-2 > .special__btn {
+    background-color: rgb(86, 7, 122);
+    color: #fff;
+    border-color: rgb(129, 7, 185);
+}
+.purple .calculator__btn--grid-2 > button {
+    background-color: orangered;
+    border-color: rgb(255, 100, 44);
+    color: #fff;
+}
+
+
+.gray {background-color: rgb(230, 230, 230);}
+.gray * {color: #000;}
+.gray .num__listbox {background-color: rgb(211, 205, 205);}
+.gray .num__listbox--dot {background-color: orangered;}
+.gray .calculator__screen,
+.gray .calculator__btn--wrapper {background-color: rgb(238, 238, 238);}
+.gray .calculator__btn--grid > button {background-color: rgb(229, 228, 224);}
+.gray .calculator__btn--grid > .special__btn,
+.gray .calculator__btn--grid-2 > .special__btn {
+    background-color: rgb(57, 130, 136);
+    color: #fff;
+    border-color: rgb(75, 187, 197);
+}
+.gray .calculator__btn--grid-2 > button {
+    background-color: cyan;
+    border-color: rgb(2, 179, 179);
+    color: #333;
+}
